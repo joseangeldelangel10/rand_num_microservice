@@ -24,7 +24,16 @@ dependencies {
 }
 
 
-
 test {
 	useJUnitPlatform()
+}
+
+ext{
+	set('springCloudVersion', "Hoxton.SR8")
+}
+
+dependencyManagment {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:$(springCloudVersion)"
+	}
 }
